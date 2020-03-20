@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="box">
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="text" name="fname" [(ngModel)]="fname" placeholder="Enter your First name..">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" name="lname" [(ngModel)]="lname" placeholder="Enter your Last name..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="text" name="phoneno" [(ngModel)]="phoneno" placeholder="Enter your ContactNo..">
+            </div>
+            <div class="col-sm-6">
+                <input type="email" name="email" [(ngModel)]="email" placeholder="Enter your email address..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="text" name="username" [(ngModel)]="username" placeholder="Enter your username..">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" name="password" [(ngModel)]="password" placeholder="Enter your password..">
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" (click)="singUp()" value="Sing Up" class="btn btn-blue">
+        </div>
+    </div>
+</div>

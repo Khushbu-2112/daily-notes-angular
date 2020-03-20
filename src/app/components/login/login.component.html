@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="box">
+       <form  #loginform="ngForm"
+       (ngSubmit)="login()">
+            <label for="username">Username: </label><br>
+            <input type="text" #user='ngModel' required name="username" [(ngModel)]="username" [ngClass]="{
+                'is-invalid': user.invalid && (user.dirty || user.touched),
+                'is-valid': user.valid && (user.dirty || user.touched)
+              }"><br>
+                <div class="invalid-feedback"
+                    *ngIf="user.errors && (user.dirty || user.touched)">
+                    <p *ngIf="user.errors.required">First Name is required</p>
+                </div>
+            <label for="password">Password:</label><br>
+            <input type="password" name="password" required #pass='ngModel' [(ngModel)]="password" [ngClass]="{
+                'is-invalid': pass.invalid && (pass.dirty || pass.touched),
+                'is-valid': pass.valid && (pass.dirty || pass.touched)
+           }" minlength="8">
+           <!-- {{JSON.stringify(pass)}} -->
+            <div class="invalid-feedback"
+                *ngIf="pass.invalid && (pass.dirty || pass.touched)">
+                <p *ngIf="pass.errors.required">Password is required</p>
+                
+                <p *ngIf="pass?.errors?.minlength">Password must be 8 characters long</p>
+            </div>
+           <br>
+            <input type="submit" class="btn btn-blue" name="submit" value="Login"> 
+            <a routerLink="/register">Don't have any account..?</a>
+       </form>
+    </div>
+</div>

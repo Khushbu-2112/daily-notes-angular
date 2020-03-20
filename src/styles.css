@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* 
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css'; */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+*{
+    font-family: 'Noto Sans', Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    --blue-color :rgb(50, 50, 145);
+    --contras-color :rgb(139, 139, 192);
+}
+
+:focus{
+    outline: none;
+}
+
+.box{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20%;
+    color: rgb(102, 102, 105);
+    width: 80%;
+}
+
+.infobox{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20%;
+    color: rgb(102, 102, 105);
+    width: 80%;
+}
+
+.btn{
+    background-color: white;
+    color: var(--blue-color);
+    border: 1px solid rgb(161, 161, 163);
+    border-radius: 8px;
+    width: auto;
+}
+
+.btn-blue{
+    background-color:var(--blue-color);
+    color: white;
+}
+
+.btn:hover{
+    background-color: var(--contras-color);
+    color: black;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid rgb(129, 129, 153);
+    width: 100%;
+    margin-bottom:10px;
+}
+
+a{
+    color: var(--blue-color);
+    float: right;
+}
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: lightgray;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .box{
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        margin: 0 auto;
+        padding: 25px;
+        margin-top: 200px;
+        color: rgb(102, 102, 105);
+        width: 35%;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
